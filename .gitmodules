@@ -1,0 +1,6 @@
+[submodule "server"]
+	path = server
+	url = https://github.com/alitrack/node-chatgpt-api
+[submodule "client"]
+	path = client
+	url = https://github.com/alitrack/PandoraAI
