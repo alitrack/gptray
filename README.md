@@ -1,0 +1,2 @@
+# gptray
+ChatGPT + EdgeGPT + Bard
