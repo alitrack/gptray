@@ -1,0 +1,18 @@
+:8433
+
+# 路由 client 端所有请求至本地的 3000 端口
+reverse_proxy  localhost:3000 
+
+
+
+@websockets {
+	header_regexp Connection Upgrade
+	header        Upgrade websocket
+}
+
+reverse_proxy @websockets localhost:24678
+
+route /api/* {
+        uri strip_prefix /api
+        reverse_proxy localhost:3008 
+    }
